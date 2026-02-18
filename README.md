@@ -1,20 +1,24 @@
 ### Rafael Rodriguez
 
-Independent AI safety researcher. Investigating structural failure modes in epistemological systems.
+Independent AI safety researcher. Creator of **Logos** — fine-tuned truth verification models that evaluate whether AI agents have epistemic grounding to act.
 
-Currently working on [The Instrument Trap](https://doi.org/10.5281/zenodo.18644322): why identity-as-authority breaks AI safety systems. Tested across 14,950 adversarial cases on fine-tuned models (1B, 9B). Zero external fabrication. 97.7% epistemological safety.
+#### The Instrument Trap
 
-#### Current Work
+When a model is framed as *possessing* truth rather than *pointing toward* it, recursive identity collapse becomes structurally inevitable. Fine-tuned identity resists what prompted identity cannot.
 
-- **Paper**: [The Instrument Trap](https://doi.org/10.5281/zenodo.18644322) (preprint)
-- **Benchmark**: [instrument-trap-benchmark](https://github.com/lumensyntax-org/instrument-trap-benchmark) — 17 scripts, 14,950 test cases, full reproduction pipeline
-- **TruthGit**: Governance layer for AI agents — `pip install truthgit`
+**Replicated across 3 model families:**
 
-#### Research Interests
+| Model | Base | Accuracy | Collapse | Hallucination |
+|-------|------|----------|----------|---------------|
+| Logos 9B | Gemma 2 (Google) | 97.3% | 0.67% | 0% |
+| Logos 14 | Nemotron 4B (NVIDIA) | 95.7% | 0% | 0% |
+| Logos 16v2 | StableLM 2 (Stability AI) | 93.0% | 0% | 0% |
 
-- Identity formation in fine-tuned models
-- Evaluation bias against epistemic humility
-- Failure taxonomy for safety-critical AI
-- Small model epistemology (1B parameter regime)
+McNemar's cross-model: p<0.001. Multi-seed stability: σ=1.4pp across 5 seeds.
 
-[lumensyntax.com](https://lumensyntax.com)
+#### Resources
+
+- **Paper**: [The Instrument Trap](https://doi.org/10.5281/zenodo.18644322) (Zenodo, 2026)
+- **Benchmark**: [14,950 tests](https://huggingface.co/datasets/LumenSyntax/instrument-trap-benchmark) on HuggingFace
+- **Code**: [lumensyntax-org](https://github.com/lumensyntax-org)
+- **Web**: [lumensyntax.com](https://lumensyntax.com)
